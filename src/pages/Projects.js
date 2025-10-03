@@ -1,0 +1,106 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Server, Container, Network, Workflow, FileText } from 'lucide-react';
+
+const Projects = () => {
+  const projects = [
+    {
+      icon: <Server className="w-12 h-12" />,
+      title: "Homelab Infrastructure",
+      description: "Building and maintaining a multi-node homelab running on Proxmox, featuring high availability, network segmentation, and comprehensive monitoring."
+    },
+    {
+      icon: <Container className="w-12 h-12" />,
+      title: "Docker Applications",
+      description: "Deploying and managing containerized applications with Docker, including custom networking, volume management, and orchestration."
+    },
+    {
+      icon: <Network className="w-12 h-12" />,
+      title: "Kubernetes Clusters",
+      description: "Setting up production-grade Kubernetes clusters for container orchestration, with automated deployments and service mesh integration."
+    },
+    {
+      icon: <Workflow className="w-12 h-12" />,
+      title: "Self-Hosting Solutions",
+      description: "Running self-hosted alternatives to cloud services, including media servers, cloud storage, password management, and automation tools."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-5xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Projects & Tech
+          </h1>
+          <p className="text-xl text-slate-300 text-center mb-16 max-w-3xl mx-auto">
+            A showcase of my infrastructure projects and technical interests.
+          </p>
+
+          {/* Tech Stack */}
+          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 mb-12">
+            <h2 className="text-3xl font-bold mb-8 text-center">Tech Stack</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-xl font-bold mb-4 text-blue-400">Languages</h4>
+                <p className="text-slate-300">Python, Java, JavaScript, Kotlin, C#</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold mb-4 text-blue-400">Infrastructure</h4>
+                <p className="text-slate-300">Docker, Kubernetes, Proxmox, Terraform, Ansible</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold mb-4 text-blue-400">Frameworks</h4>
+                <p className="text-slate-300">React, Svelte, Node.js, .NET</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all"
+              >
+                <div className="mb-4 text-blue-400">
+                  {project.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                <p className="text-slate-400">{project.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Resume Link */}
+          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 text-center">
+            <FileText className="w-16 h-16 mx-auto mb-4 text-blue-400" />
+            <h3 className="text-2xl font-bold mb-4">Full Resume</h3>
+            <p className="text-slate-300 mb-6">
+              Want to learn more about my experience and skills?
+            </p>
+            <div className="flex gap-4 justify-center">
+              <a
+                href="/Ashwin KAUSHIK.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors inline-flex items-center gap-2"
+              >
+                View Resume
+              </a>
+              <a
+                href="/Ashwin KAUSHIK.pdf"
+                download
+                className="px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors inline-flex items-center gap-2"
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Projects;
