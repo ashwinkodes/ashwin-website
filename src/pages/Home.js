@@ -44,15 +44,26 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section id="home" className="relative pt-32 pb-20 px-6 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/RuapehuSnowSchool.JPG)',
+            backgroundPosition: 'center 45%',
+            filter: 'brightness(0.4)'
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto text-center">
           <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Hey, I'm Ashwin
           </h2>
           <p className="text-2xl text-slate-300 mb-8">
             Software Developer | Infrastructure Enthusiast | Outdoor Adventurer
           </p>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-12">
             I build scalable systems, automate infrastructure, and when I'm not coding,
             you'll find me on a mountain bike, ski slope, hiking trail, or tinkering with my homelab.
           </p>
