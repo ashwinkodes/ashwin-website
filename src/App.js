@@ -9,6 +9,10 @@ import MTB from './pages/MTB';
 import Skiing from './pages/Skiing';
 import Tramping from './pages/Tramping';
 import Motorcycling from './pages/Motorcycling';
+import Homelab from './pages/Homelab';
+import Docker from './pages/Docker';
+import SelfHosting from './pages/Self-Hosting.js';
+import Research from './pages/Research';
 
 const App = () => {
   return (
@@ -23,6 +27,10 @@ const App = () => {
           <Route path="/about/tramping" element={<Tramping />} />
           <Route path="/about/motorcycling" element={<Motorcycling />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/homelab" element={<Homelab />} />
+          <Route path="/docker" element={<Docker />} />
+          <Route path="/self-hosting" element={<SelfHosting />} />
+          <Route path="/research" element={<Research />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

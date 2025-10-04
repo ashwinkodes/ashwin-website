@@ -1,27 +1,34 @@
 import React from 'react';
 import { Server, Container, Network, Workflow, FileText } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const projects = [
     {
       icon: <Server className="w-12 h-12" />,
       title: "Homelab Infrastructure",
-      description: "Building and maintaining a multi-node homelab running on Proxmox, featuring high availability, network segmentation, and comprehensive monitoring."
+      description: "Building and maintaining a multi-node homelab running on Proxmox, featuring high availability, network segmentation, and comprehensive monitoring.",
+      path: "/homelab"
     },
     {
       icon: <Container className="w-12 h-12" />,
       title: "Docker Applications",
-      description: "Deploying and managing containerized applications with Docker, including custom networking, volume management, and orchestration."
+      description: "Deploying and managing containerized applications with Docker, including custom networking, volume management, and orchestration.",
+      path: "/docker"
     },
     {
       icon: <Network className="w-12 h-12" />,
-      title: "Kubernetes Clusters",
-      description: "Setting up production-grade Kubernetes clusters for container orchestration, with automated deployments and service mesh integration."
+      title: "Networking Research",
+      description: "Exploring advanced networking concepts, protocols, and architectures through research and practical implementation.",
+      path: "/research"
     },
     {
       icon: <Workflow className="w-12 h-12" />,
       title: "Self-Hosting Solutions",
-      description: "Running self-hosted alternatives to cloud services, including media servers, cloud storage, password management, and automation tools."
+      description: "Running self-hosted alternatives to cloud services, including media servers, cloud storage, password management, and automation tools.",
+      path: "/self-hosting"
     }
   ];
 
@@ -60,7 +67,8 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all flex flex-col items-center text-center"
+                onClick={() => navigate(project.path)}
+                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all flex flex-col items-center text-center cursor-pointer transform hover:scale-105"
               >
                 <div className="mb-4 text-blue-400">
                   {project.icon}
