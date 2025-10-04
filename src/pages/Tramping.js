@@ -8,7 +8,7 @@ const Tramping = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
             <Compass className="w-16 h-16 text-blue-400 mr-4" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
               Tramping
             </h1>
           </div>
