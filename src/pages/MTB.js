@@ -22,7 +22,7 @@ const MTB = () => {
           </div>
 
           <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6">Exploring Trails on Two Wheels</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Exploring Trails on Two Wheels</h2>
             <div className="space-y-4 text-slate-300 text-lg">
               <p>
                 Mountain biking is more than just a hobby—it's a way to connect with nature, challenge myself, and experience pure freedom on the trails.

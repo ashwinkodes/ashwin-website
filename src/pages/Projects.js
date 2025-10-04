@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Server, Container, Network, Workflow, FileText } from 'lucide-react';
 
 const Projects = () => {
@@ -30,7 +29,7 @@ const Projects = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
             Projects & Tech
           </h1>
           <p className="text-xl text-slate-300 text-center mb-16 max-w-3xl mx-auto">
@@ -41,15 +40,15 @@ const Projects = () => {
           <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 mb-12">
             <h2 className="text-3xl font-bold mb-8 text-center">Tech Stack</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div>
+              <div className="text-center">
                 <h4 className="text-xl font-bold mb-4 text-blue-400">Languages</h4>
                 <p className="text-slate-300">Python, Java, JavaScript, Kotlin, C#</p>
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="text-xl font-bold mb-4 text-blue-400">Infrastructure</h4>
                 <p className="text-slate-300">Docker, Kubernetes, Proxmox, Terraform, Ansible</p>
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="text-xl font-bold mb-4 text-blue-400">Frameworks</h4>
                 <p className="text-slate-300">React, Svelte, Node.js, .NET</p>
               </div>
@@ -61,7 +60,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all"
+                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all flex flex-col items-center text-center"
               >
                 <div className="mb-4 text-blue-400">
                   {project.icon}

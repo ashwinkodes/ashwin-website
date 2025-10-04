@@ -57,7 +57,7 @@ const About = () => {
               <Link
                 key={index}
                 to={interest.link}
-                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all hover:transform hover:scale-105"
+                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all hover:transform hover:scale-105 flex flex-col items-center text-center"
               >
                 <div className="mb-4 text-blue-400">
                   {interest.icon}

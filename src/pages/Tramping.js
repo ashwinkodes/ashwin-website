@@ -22,7 +22,7 @@ const Tramping = () => {
           </div>
 
           <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6">Exploring New Zealand's Backcountry</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Exploring New Zealand's Backcountry</h2>
             <div className="space-y-4 text-slate-300 text-lg">
               <p>
                 Tramping (or hiking, for my American friends) is the ultimate way to disconnect from the digital world and immerse myself in nature.

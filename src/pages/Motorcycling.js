@@ -22,7 +22,7 @@ const Motorcycling = () => {
           </div>
 
           <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6">Freedom on Two Wheels</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Freedom on Two Wheels</h2>
             <div className="space-y-4 text-slate-300 text-lg">
               <p>
                 Motorcycling represents pure freedom—the open road, the wind in your face, and the connection between rider and machine.

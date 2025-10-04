@@ -57,7 +57,7 @@ const Home = () => {
 
         {/* Content */}
         <div className="relative max-w-6xl mx-auto text-center">
-          <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
             Hey, I'm Ashwin
           </h2>
           <p className="text-2xl text-slate-300 mb-8">
@@ -95,7 +95,7 @@ const Home = () => {
               <Link
                 key={index}
                 to={interest.link}
-                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all hover:transform hover:scale-105"
+                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all hover:transform hover:scale-105 flex flex-col items-center text-center"
               >
                 <div className="mb-4 text-blue-400">
                   {interest.icon}
@@ -119,15 +119,15 @@ const Home = () => {
           <h3 className="text-4xl font-bold mb-8 text-center">Tech I Work With</h3>
           <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
             <div className="grid md:grid-cols-3 gap-8">
-              <div>
+              <div className="text-center">
                 <h4 className="text-xl font-bold mb-4 text-blue-400">Languages</h4>
                 <p className="text-slate-300">Python, Java, JavaScript, Kotlin, C#</p>
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="text-xl font-bold mb-4 text-blue-400">Infrastructure</h4>
                 <p className="text-slate-300">Docker, Kubernetes, Proxmox, Terraform, Ansible</p>
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="text-xl font-bold mb-4 text-blue-400">Frameworks</h4>
                 <p className="text-slate-300">React, Svelte, Node.js, .NET</p>
               </div>

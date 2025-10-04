@@ -22,7 +22,7 @@ const Skiing = () => {
           </div>
 
           <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6">Carving Down the Mountains</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Carving Down the Mountains</h2>
             <div className="space-y-4 text-slate-300 text-lg">
               <p>
                 There's nothing quite like the feeling of fresh powder beneath your skis and the rush of carving down a pristine slope.
