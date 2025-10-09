@@ -1,5 +1,6 @@
 import React from 'react';
 import { Server, Cpu, HardDrive, Network, Shield } from 'lucide-react';
+import styles from './Homelab.module.css';
 
 const Homelab = () => {
   const infrastructure = [
@@ -26,23 +27,23 @@ const Homelab = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Server className="w-16 h-16 text-blue-400 mr-4" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+    <div className={styles.pageContainer}>
+      <section className={styles.section}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.header}>
+            <Server className={styles.headerIcon} />
+            <h1 className={styles.title}>
               Homelab Infrastructure
             </h1>
           </div>
 
-          <p className="text-xl text-slate-300 text-center mb-12 max-w-3xl mx-auto">
+          <p className={styles.subtitle}>
             A production-grade home infrastructure for learning, experimentation, and hosting personal services
           </p>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Overview</h2>
-            <div className="space-y-4 text-slate-300 text-lg">
+          <div className={styles.overviewCard}>
+            <h2 className={styles.overviewTitle}>Overview</h2>
+            <div className={styles.overviewContent}>
               <p>
                 My homelab serves as a powerful learning environment and production infrastructure for self-hosted services. Built on enterprise-grade virtualization technologies, it provides hands-on experience with systems administration, networking, and DevOps practices.
               </p>
@@ -52,34 +53,34 @@ const Homelab = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className={styles.infrastructureGrid}>
             {infrastructure.map((item, index) => (
-              <div key={index} className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 text-center">
-                <div className="flex items-center justify-center mb-4">
-                  <div className="text-blue-400 mr-3">
+              <div key={index} className={styles.infrastructureCard}>
+                <div className={styles.cardHeader}>
+                  <div className={styles.cardIcon}>
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold">{item.title}</h3>
+                  <h3 className={styles.cardTitle}>{item.title}</h3>
                 </div>
-                <p className="text-slate-400">{item.description}</p>
+                <p className={styles.cardDescription}>{item.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6 text-center">Key Technologies</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className={styles.technologiesCard}>
+            <h2 className={styles.technologiesTitle}>Key Technologies</h2>
+            <div className={styles.technologiesGrid}>
               <div>
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Virtualization</h4>
-                <p className="text-slate-300">Proxmox VE, KVM, LXC Containers</p>
+                <h4 className={styles.techCategory}>Virtualization</h4>
+                <p className={styles.techList}>Proxmox VE, KVM, LXC Containers</p>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Networking</h4>
-                <p className="text-slate-300">pfSense, VLANs, WireGuard VPN</p>
+                <h4 className={styles.techCategory}>Networking</h4>
+                <p className={styles.techList}>pfSense, VLANs, WireGuard VPN</p>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Monitoring</h4>
-                <p className="text-slate-300">Prometheus, Grafana, Uptime Kuma</p>
+                <h4 className={styles.techCategory}>Monitoring</h4>
+                <p className={styles.techList}>Prometheus, Grafana, Uptime Kuma</p>
               </div>
             </div>
           </div>

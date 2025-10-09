@@ -1,5 +1,6 @@
 import React from 'react';
 import { Workflow, Cloud, Film, Shield, Calendar } from 'lucide-react';
+import styles from './Self-Hosting.module.css';
 
 const SelfHosting = () => {
   const services = [
@@ -26,23 +27,23 @@ const SelfHosting = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Workflow className="w-16 h-16 text-blue-400 mr-4" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+    <div className={styles.pageContainer}>
+      <section className={styles.section}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.header}>
+            <Workflow className={styles.headerIcon} />
+            <h1 className={styles.title}>
               Self-Hosting Solutions
             </h1>
           </div>
 
-          <p className="text-xl text-slate-300 text-center mb-12 max-w-3xl mx-auto">
+          <p className={styles.subtitle}>
             Taking control of data and services by hosting alternatives to cloud platforms
           </p>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Why Self-Host?</h2>
-            <div className="space-y-4 text-slate-300 text-lg">
+          <div className={styles.overviewCard}>
+            <h2 className={styles.overviewTitle}>Why Self-Host?</h2>
+            <div className={styles.overviewContent}>
               <p>
                 Self-hosting puts me in control of my data, privacy, and costs. Instead of relying on third-party services that can change terms, raise prices, or shut down unexpectedly, I run open-source alternatives on my own infrastructure.
               </p>
@@ -52,34 +53,34 @@ const SelfHosting = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className={styles.servicesGrid}>
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 text-center">
-                <div className="flex items-center justify-center mb-4">
-                  <div className="text-blue-400 mr-3">
+              <div key={index} className={styles.serviceCard}>
+                <div className={styles.serviceHeader}>
+                  <div className={styles.serviceIcon}>
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold">{service.category}</h3>
+                  <h3 className={styles.serviceCategory}>{service.category}</h3>
                 </div>
-                <p className="text-slate-400">{service.description}</p>
+                <p className={styles.serviceDescription}>{service.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6 text-center">Key Principles</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Data Ownership</h4>
-                <p className="text-slate-300">Full control over personal data with no third-party dependencies</p>
+          <div className={styles.principlesCard}>
+            <h2 className={styles.principlesTitle}>Key Principles</h2>
+            <div className={styles.principlesGrid}>
+              <div className={styles.principleItem}>
+                <h4 className={styles.principleTitle}>Data Ownership</h4>
+                <p className={styles.principleDescription}>Full control over personal data with no third-party dependencies</p>
               </div>
-              <div className="text-center">
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Automated Backups</h4>
-                <p className="text-slate-300">Regular snapshots and off-site replication for disaster recovery</p>
+              <div className={styles.principleItem}>
+                <h4 className={styles.principleTitle}>Automated Backups</h4>
+                <p className={styles.principleDescription}>Regular snapshots and off-site replication for disaster recovery</p>
               </div>
-              <div className="text-center">
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Secure Access</h4>
-                <p className="text-slate-300">VPN, reverse proxy with SSL, and authentication layers</p>
+              <div className={styles.principleItem}>
+                <h4 className={styles.principleTitle}>Secure Access</h4>
+                <p className={styles.principleDescription}>VPN, reverse proxy with SSL, and authentication layers</p>
               </div>
             </div>
           </div>

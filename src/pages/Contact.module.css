@@ -1,0 +1,108 @@
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, rgb(15 23 42), rgb(30 41 59), rgb(15 23 42));
+  color: white;
+}
+
+.section {
+  padding: 5rem 1.5rem;
+}
+
+.contentWrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, rgb(96 165 250), rgb(34 211 238));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgb(203 213 225);
+  margin-bottom: 3rem;
+}
+
+.contactGrid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contactGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contactCard {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  border: 1px solid rgb(51 65 85);
+  transition: all 0.2s;
+}
+
+.contactCard:hover {
+  border-color: rgb(59 130 246);
+  transform: scale(1.05);
+}
+
+.contactIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  color: rgb(96 165 250);
+}
+
+.contactTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contactDescription {
+  color: rgb(148 163 184);
+}
+
+.emailCard {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  border: 1px solid rgb(51 65 85);
+}
+
+.emailTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.emailText {
+  color: rgb(203 213 225);
+  margin-bottom: 1.5rem;
+}
+
+.emailAddress {
+  color: rgb(96 165 250);
+}
+
+.emailButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgb(37 99 235);
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  transition: background 0.2s;
+}
+
+.emailButton:hover {
+  background: rgb(29 78 216);
+}

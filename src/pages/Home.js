@@ -155,7 +155,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-slate-700">
-        <div className="content-wrapper text-center text-slate-400">
+        <div className="content-wrapper text-center text-white">
           <p>© 2025 Ashwin Kaushik. Built with React, deployed on a Raspberry Pi.</p>
         </div>
       </footer>

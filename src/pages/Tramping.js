@@ -1,29 +1,30 @@
 import React from 'react';
 import { Compass } from 'lucide-react';
+import styles from './Tramping.module.css';
 
 const Tramping = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Compass className="w-16 h-16 text-blue-400 mr-4" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+    <div className={styles.pageContainer}>
+      <section className={styles.section}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.header}>
+            <Compass className={styles.headerIcon} />
+            <h1 className={styles.title}>
               Tramping
             </h1>
           </div>
 
-          <div className="mb-12">
+          <div className={styles.imageContainer}>
             <img
               src="/images/tramping.jpg"
               alt="Tramping"
-              className="w-full h-96 object-cover rounded-lg shadow-2xl"
+              className={styles.heroImage}
             />
           </div>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6 text-center">Exploring New Zealand's Backcountry</h2>
-            <div className="space-y-4 text-slate-300 text-lg">
+          <div className={styles.contentCard}>
+            <h2 className={styles.contentTitle}>Exploring New Zealand's Backcountry</h2>
+            <div className={styles.contentText}>
               <p>
                 Tramping (or hiking, for my American friends) is the ultimate way to disconnect from the digital world and immerse myself in nature.
               </p>

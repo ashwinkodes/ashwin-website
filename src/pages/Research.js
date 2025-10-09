@@ -1,5 +1,6 @@
 import React from 'react';
 import { Network, Radio, Code, LineChart } from 'lucide-react';
+import styles from './Research.module.css';
 
 const Research = () => {
   const researchAreas = [
@@ -26,23 +27,23 @@ const Research = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Network className="w-16 h-16 text-blue-400 mr-4" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+    <div className={styles.pageContainer}>
+      <section className={styles.section}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.header}>
+            <Network className={styles.headerIcon} />
+            <h1 className={styles.title}>
               Networking Research
             </h1>
           </div>
 
-          <p className="text-xl text-slate-300 text-center mb-12 max-w-3xl mx-auto">
+          <p className={styles.subtitle}>
             Exploring the foundations and future of computer networking through research and experimentation
           </p>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Research Focus</h2>
-            <div className="space-y-4 text-slate-300 text-lg">
+          <div className={styles.overviewCard}>
+            <h2 className={styles.overviewTitle}>Research Focus</h2>
+            <div className={styles.overviewContent}>
               <p>
                 My networking research focuses on understanding how modern networks operate at scale and exploring emerging technologies that are shaping the future of connectivity. This includes hands-on experimentation with network protocols, performance optimization, and infrastructure design.
               </p>
@@ -52,34 +53,34 @@ const Research = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className={styles.areasGrid}>
             {researchAreas.map((area, index) => (
-              <div key={index} className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 text-center">
-                <div className="flex items-center justify-center mb-4">
-                  <div className="text-blue-400 mr-3">
+              <div key={index} className={styles.areaCard}>
+                <div className={styles.areaHeader}>
+                  <div className={styles.areaIcon}>
                     {area.icon}
                   </div>
-                  <h3 className="text-xl font-bold">{area.title}</h3>
+                  <h3 className={styles.areaTitle}>{area.title}</h3>
                 </div>
-                <p className="text-slate-400">{area.description}</p>
+                <p className={styles.areaDescription}>{area.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold mb-6 text-center">Tools & Technologies</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className={styles.toolsCard}>
+            <h2 className={styles.toolsTitle}>Tools & Technologies</h2>
+            <div className={styles.toolsGrid}>
               <div>
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Analysis</h4>
-                <p className="text-slate-300">Wireshark, tcpdump, iperf, nmap</p>
+                <h4 className={styles.toolCategory}>Analysis</h4>
+                <p className={styles.toolList}>Wireshark, tcpdump, iperf, nmap</p>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Simulation</h4>
-                <p className="text-slate-300">GNS3, EVE-NG, Mininet</p>
+                <h4 className={styles.toolCategory}>Simulation</h4>
+                <p className={styles.toolList}>GNS3, EVE-NG, Mininet</p>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-blue-400 mb-2">Programming</h4>
-                <p className="text-slate-300">Python (Scapy), Go, C/C++</p>
+                <h4 className={styles.toolCategory}>Programming</h4>
+                <p className={styles.toolList}>Python (Scapy), Go, C/C++</p>
               </div>
             </div>
           </div>
