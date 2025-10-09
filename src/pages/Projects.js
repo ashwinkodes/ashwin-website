@@ -33,10 +33,10 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+    <div className="page-container">
+      <section className="section">
+        <div className="content-wrapper">
+          <h1 className="page-title">
             Projects & Tech
           </h1>
           <p className="text-xl text-slate-300 text-center mb-16 max-w-3xl mx-auto">
@@ -44,7 +44,7 @@ const Projects = () => {
           </p>
 
           {/* Tech Stack */}
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 mb-12">
+          <div className="card p-8 mb-12">
             <h2 className="text-3xl font-bold mb-8 text-center">Tech Stack</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -68,9 +68,9 @@ const Projects = () => {
               <div
                 key={index}
                 onClick={() => navigate(project.path)}
-                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all flex flex-col items-center text-center cursor-pointer transform hover:scale-105"
+                className="card-clickable flex flex-col items-center text-center"
               >
-                <div className="mb-4 text-blue-400">
+                <div className="icon-blue">
                   {project.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
@@ -80,7 +80,7 @@ const Projects = () => {
           </div>
 
           {/* Resume Link */}
-          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700 text-center">
+          <div className="card p-8 text-center">
             <FileText className="w-16 h-16 mx-auto mb-4 text-blue-400" />
             <h3 className="text-2xl font-bold mb-4">Full Resume</h3>
             <p className="text-slate-300 mb-6">
@@ -91,14 +91,14 @@ const Projects = () => {
                 href="/Ashwin KAUSHIK.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors inline-flex items-center gap-2"
+                className="btn-primary inline-flex items-center gap-2"
               >
                 View Resume
               </a>
               <a
                 href="/Ashwin KAUSHIK.pdf"
                 download
-                className="px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors inline-flex items-center gap-2"
+                className="btn-secondary inline-flex items-center gap-2"
               >
                 Download Resume
               </a>

@@ -42,10 +42,10 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+    <div className="page-container">
+      <section className="section">
+        <div className="content-wrapper">
+          <h1 className="page-title">
             About Me
           </h1>
           <p className="text-xl text-slate-300 text-center mb-16 max-w-3xl mx-auto">
@@ -57,9 +57,9 @@ const About = () => {
               <Link
                 key={index}
                 to={interest.link}
-                className="bg-slate-900/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-all hover:transform hover:scale-105 flex flex-col items-center text-center"
+                className="interest-card"
               >
-                <div className="mb-4 text-blue-400">
+                <div className="icon-blue">
                   {interest.icon}
                 </div>
                 <h4 className="text-xl font-bold mb-2">{interest.title}</h4>
